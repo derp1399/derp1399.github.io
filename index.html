@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>无删减视频 | 官方视频门户 · 完整内容品质平台</title>
+<meta name="description" content="无删减视频官方网站，专注完整版视频内容生态，为创作者与企业提供高清正版、持续运营的视频社区与精品内容平台。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%2367e8f9' stroke-width='4'/%3E%3Cpath d='M27 24l14 8-14 8z' fill='%2367e8f9'/%3E%3C/svg%3E">
+<style>
+:root{
+  --nvd-bg:#0b1020;
+  --nvd-panel:#111a31;
+  --nvd-panel2:#16223f;
+  --nvd-line:rgba(120,170,255,.16);
+  --nvd-text:#e9f0ff;
+  --nvd-muted:#9fb0cc;
+  --nvd-accent:#67e8f9;
+  --nvd-accent2:#8b5cf6;
+  --nvd-warm:#ffd166;
+  --nvd-radius:16px;
+  --nvd-sticky:118px;
+  --nvd-max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nvd-sticky)}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+  background:radial-gradient(1200px 600px at 15% -10%,#182a52 0%,transparent 60%),
+             radial-gradient(900px 500px at 90% 0%,#2a1c4d 0%,transparent 55%),
+             var(--nvd-bg);
+  color:var(--nvd-text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.nvd-wrap{max-width:var(--nvd-max);margin:0 auto;padding:0 22px}
+.nvd-eyebrow{color:var(--nvd-accent);font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.nvd-section{padding:64px 0}
+.nvd-section-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:34px}
+.nvd-section-head h2{font-size:clamp(24px,3.2vw,34px);line-height:1.3;letter-spacing:.02em}
+.nvd-section-head p{color:var(--nvd-muted);max-width:560px;font-size:15px}
+.nvd-tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;line-height:1.6;
+  background:rgba(103,232,249,.1);color:var(--nvd-accent);border:1px solid rgba(103,232,249,.28)}
+.nvd-tag--purple{background:rgba(139,92,246,.14);color:#c4b5fd;border-color:rgba(139,92,246,.35)}
+.nvd-tag--warm{background:rgba(255,209,102,.12);color:var(--nvd-warm);border-color:rgba(255,209,102,.32)}
+
+/* sticky top */
+.nvd-top{position:sticky;top:0;z-index:60}
+.nvd-announce{background:linear-gradient(90deg,#132246,#1d1a44 50%,#132246);border-bottom:1px solid var(--nvd-line);
+  font-size:13px;color:#c9d8f5;overflow:hidden}
+.nvd-announce-inner{max-width:var(--nvd-max);margin:0 auto;padding:9px 22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.nvd-announce b{color:var(--nvd-accent);font-weight:600}
+.nvd-announce .nvd-dot{width:6px;height:6px;border-radius:50%;background:var(--nvd-accent);box-shadow:0 0 10px var(--nvd-accent);flex:0 0 auto}
+.nvd-announce a{color:var(--nvd-warm);white-space:nowrap}
+.nvd-header{background:rgba(11,16,32,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--nvd-line)}
+.nvd-nav{max-width:var(--nvd-max);margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:18px}
+.nvd-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.04em;flex:0 0 auto}
+.nvd-logo svg{width:34px;height:34px}
+.nvd-logo span small{display:block;font-size:10px;font-weight:500;color:var(--nvd-muted);letter-spacing:.28em}
+.nvd-navlinks{display:flex;gap:4px;margin-left:8px;flex:1 1 auto;flex-wrap:wrap}
+.nvd-navlinks a{padding:8px 12px;border-radius:10px;font-size:14px;color:#cfdcf4;transition:.2s}
+.nvd-navlinks a:hover{background:rgba(103,232,249,.1);color:var(--nvd-accent)}
+.nvd-search{position:relative;flex:0 1 260px;min-width:0}
+.nvd-search input{width:100%;padding:9px 40px 9px 14px;border-radius:12px;background:#0e1730;border:1px solid var(--nvd-line);
+  color:var(--nvd-text);font-size:14px;outline:none;transition:.2s}
+.nvd-search input:focus{border-color:var(--nvd-accent);box-shadow:0 0 0 3px rgba(103,232,249,.12)}
+.nvd-search button{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:8px;
+  display:grid;place-items:center;color:var(--nvd-accent);background:rgba(103,232,249,.1)}
+.nvd-search-tip{position:absolute;left:0;right:0;top:calc(100% + 8px);background:#101a33;border:1px solid var(--nvd-line);
+  border-radius:12px;padding:10px 14px;font-size:13px;color:var(--nvd-muted);display:none;z-index:70;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.nvd-search-tip.show{display:block}
+.nvd-burger{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--nvd-line);place-items:center;color:var(--nvd-text)}
+.nvd-burger svg{width:20px;height:20px}
+
+/* hero */
+.nvd-hero{padding:56px 0 30px;position:relative;overflow:hidden}
+.nvd-hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:44px;align-items:center}
+.nvd-hero h1{font-size:clamp(34px,5.4vw,62px);line-height:1.14;letter-spacing:.01em;font-weight:800;margin:12px 0 6px}
+.nvd-hero h1 em{font-style:normal;background:linear-gradient(95deg,var(--nvd-accent),var(--nvd-accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.nvd-hero-lead{color:var(--nvd-muted);font-size:16px;margin:14px 0 18px;max-width:520px}
+.nvd-hero-desc{font-size:15px;color:#c3d2ec;margin-bottom:22px;max-width:560px}
+.nvd-hero-desc b{color:var(--nvd-text);font-weight:600}
+.nvd-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.nvd-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:12px;font-size:14px;font-weight:600;transition:.22s;border:1px solid transparent}
+.nvd-btn--primary{background:linear-gradient(100deg,var(--nvd-accent),#4fd1e8);color:#06202a;box-shadow:0 10px 26px rgba(103,232,249,.22)}
+.nvd-btn--primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(103,232,249,.32)}
+.nvd-btn--ghost{border-color:var(--nvd-line);color:#d7e4fb;background:rgba(255,255,255,.03)}
+.nvd-btn--ghost:hover{border-color:var(--nvd-accent);color:var(--nvd-accent)}
+.nvd-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:520px}
+.nvd-stat{background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid var(--nvd-line);
+  border-radius:14px;padding:14px 16px}
+.nvd-stat b{display:block;font-size:clamp(20px,2.4vw,27px);color:var(--nvd-accent);letter-spacing:.02em}
+.nvd-stat span{font-size:12.5px;color:var(--nvd-muted)}
+.nvd-hero-visual{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--nvd-line);
+  box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.nvd-hero-visual svg{width:100%;height:auto}
+.nvd-hero-badge{position:absolute;left:16px;bottom:16px;display:flex;gap:10px;align-items:center;background:rgba(9,14,28,.82);
+  border:1px solid var(--nvd-line);border-radius:12px;padding:9px 14px;font-size:13px;backdrop-filter:blur(8px)}
+.nvd-hero-badge .nvd-play-dot{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--nvd-accent);color:#06202a}
+.nvd-pulse{position:absolute;top:16px;right:16px;background:rgba(255,209,102,.15);border:1px solid rgba(255,209,102,.4);
+  color:var(--nvd-warm);border-radius:999px;padding:4px 12px;font-size:12px;backdrop-filter:blur(6px)}
+
+/* generic cards */
+.nvd-card{background:linear-gradient(165deg,var(--nvd-panel),var(--nvd-panel2));border:1px solid var(--nvd-line);
+  border-radius:var(--nvd-radius);transition:.24s}
+.nvd-card:hover{border-color:rgba(103,232,249,.42);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.38)}
+
+/* focus */
+.nvd-focus{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:22px}
+.nvd-focus-main{overflow:hidden;display:flex;flex-direction:column}
+.nvd-focus-main .nvd-media{position:relative;aspect-ratio:16/9;overflow:hidden}
+.nvd-focus-main .nvd-media svg{width:100%;height:100%}
+.nvd-focus-main .nvd-body{padding:22px 24px 24px}
+.nvd-focus-main h3{font-size:22px;line-height:1.4;margin:10px 0 8px}
+.nvd-focus-main p{color:var(--nvd-muted);font-size:14.5px}
+.nvd-meta{display:flex;flex-wrap:wrap;gap:14px;color:#8fa2c1;font-size:12.5px;margin-top:14px;align-items:center}
+.nvd-side-list{display:flex;flex-direction:column;gap:14px}
+.nvd-side-item{display:flex;gap:14px;padding:14px;align-items:flex-start}
+.nvd-side-item .nvd-thumb{flex:0 0 92px;aspect-ratio:16/10;border-radius:10px;overflow:hidden;border:1px solid var(--nvd-line)}
+.nvd-side-item .nvd-thumb svg{width:100%;height:100%}
+.nvd-side-item h4{font-size:14.8px;line-height:1.5}
+.nvd-side-item span{font-size:12px;color:#8fa2c1}
+
+/* video list */
+.nvd-vlist{display:flex;flex-direction:column;gap:14px}
+.nvd-vrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:18px 20px;align-items:center}
+.nvd-vrow h3{font-size:17px;margin-bottom:6px;line-height:1.45}
+.nvd-vrow p{font-size:14px;color:var(--nvd-muted)}
+.nvd-vrow .nvd-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.nvd-vrow-side{display:flex;flex-direction:column;align-items:flex-end;gap:10px;justify-self:end}
+.nvd-actions{display:flex;gap:8px}
+.nvd-act{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;padding:7px 12px;border-radius:10px;
+  border:1px solid var(--nvd-line);color:#c2d2ee;transition:.2s;white-space:nowrap}
+.nvd-act:hover{border-color:var(--nvd-accent);color:var(--nvd-accent)}
+.nvd-act.on-like{background:rgba(103,232,249,.14);border-color:var(--nvd-accent);color:var(--nvd-accent)}
+.nvd-act.on-fav{background:rgba(139,92,246,.16);border-color:var(--nvd-accent2);color:#c4b5fd}
+.nvd-act svg{width:14px;height:14px}
+.nvd-num{font-variant-numeric:tabular-nums}
+.nvd-thumbwide{width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--nvd-line);margin-bottom:18px}
+.nvd-thumbwide svg{width:100%;height:100%}
+
+/* topics */
+.nvd-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.nvd-topic{padding:22px;display:flex;flex-direction:column;gap:12px}
+.nvd-topic h3{font-size:19px;line-height:1.4}
+.nvd-topic>p{font-size:14px;color:var(--nvd-muted)}
+.nvd-topic ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.nvd-topic li{font-size:13.5px;color:#c9d7f0;padding-left:16px;position:relative}
+.nvd-topic li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:2px;
+  background:linear-gradient(135deg,var(--nvd-accent),var(--nvd-accent2))}
+.nvd-status{font-size:12px;color:var(--nvd-warm)}
+
+/* expand / keyword解析 */
+.nvd-article{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:30px;align-items:start}
+.nvd-prose h3{font-size:19px;margin:26px 0 10px;color:#eaf3ff;position:relative;padding-left:14px}
+.nvd-prose h3::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;border-radius:3px;
+  background:linear-gradient(180deg,var(--nvd-accent),var(--nvd-accent2))}
+.nvd-prose h3:first-child{margin-top:0}
+.nvd-prose p{color:#bccbe6;font-size:15px;margin-bottom:12px}
+.nvd-prose b{color:var(--nvd-text)}
+.nvd-aside{position:sticky;top:calc(var(--nvd-sticky) + 16px);display:flex;flex-direction:column;gap:14px}
+.nvd-aside-card{padding:20px}
+.nvd-aside-card h4{font-size:15px;margin-bottom:10px;color:var(--nvd-accent)}
+.nvd-aside-card p{font-size:13.5px;color:var(--nvd-muted)}
+.nvd-mini-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:4px}
+.nvd-mini-list li{font-size:13.5px;color:#c9d7f0;display:flex;gap:10px;align-items:flex-start}
+.nvd-mini-list li i{flex:0 0 22px;height:22px;border-radius:7px;background:rgba(103,232,249,.12);color:var(--nvd-accent);
+  display:grid;place-items:center;font-style:normal;font-size:11.5px;font-weight:700}
+
+/* authors */
+.nvd-authors{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.nvd-author{display:flex;gap:16px;padding:20px;align-items:flex-start}
+.nvd-avatar{flex:0 0 62px;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;
+  font-weight:800;font-size:21px;color:#07131f;position:relative;overflow:hidden}
+.nvd-avatar::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,.25)}
+.nvd-author h3{font-size:16.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.nvd-author h3 .nvd-tag{font-size:11px;padding:1px 8px}
+.nvd-author .nvd-a-meta{font-size:12.5px;color:#8fa2c1;margin:4px 0 8px}
+.nvd-author p{font-size:13.5px;color:#c1d0ea}
+.nvd-author .nvd-link{font-size:12.5px;color:var(--nvd-accent);margin-top:10px;display:inline-flex;align-items:center;gap:6px}
+
+/* reviews */
+.nvd-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.nvd-review{padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.nvd-review .nvd-r-head{display:flex;align-items:center;gap:10px;font-size:13.5px;color:#a9bbd8}
+.nvd-review .nvd-r-head .nvd-avatar{width:32px;height:32px;flex:0 0 32px;font-size:13px}
+.nvd-review .nvd-r-head b{color:var(--nvd-text);font-weight:600;font-size:13.5px}
+.nvd-stars{color:var(--nvd-warm);letter-spacing:2px;font-size:12.5px}
+.nvd-review p{font-size:14px;color:#c4d3ec}
+.nvd-review .nvd-r-tag{font-size:11.5px;color:#88a0c4}
+
+/* dynamics */
+.nvd-dyn{display:flex;flex-direction:column;gap:0}
+.nvd-dyn-item{display:grid;grid-template-columns:92px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px dashed var(--nvd-line);align-items:start}
+.nvd-dyn-item:last-child{border-bottom:none}
+.nvd-dyn-item time{font-size:12.5px;color:var(--nvd-accent);letter-spacing:.04em;padding-top:2px}
+.nvd-dyn-item h3{font-size:15.5px;margin-bottom:4px}
+.nvd-dyn-item p{font-size:13.5px;color:var(--nvd-muted)}
+
+/* partners */
+.nvd-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.nvd-partner{padding:18px;border-radius:14px;border:1px solid var(--nvd-line);background:rgba(255,255,255,.025);
+  display:flex;flex-direction:column;gap:6px;align-items:flex-start;transition:.2s}
+.nvd-partner:hover{border-color:rgba(139,92,246,.45);background:rgba(139,92,246,.07)}
+.nvd-partner b{font-size:15px}
+.nvd-partner span{font-size:12px;color:var(--nvd-muted)}
+
+/* faq */
+.nvd-faq{display:flex;flex-direction:column;gap:10px}
+.nvd-faq details{background:rgba(255,255,255,.03);border:1px solid var(--nvd-line);border-radius:12px;padding:0 18px;transition:.2s}
+.nvd-faq details[open]{border-color:rgba(103,232,249,.4);background:rgba(103,232,249,.05)}
+.nvd-faq summary{cursor:pointer;list-style:none;padding:15px 0;font-size:15px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.nvd-faq summary::-webkit-details-marker{display:none}
+.nvd-faq summary::after{content:"+";color:var(--nvd-accent);font-size:19px;line-height:1;transition:.2s}
+.nvd-faq details[open] summary::after{content:"−"}
+.nvd-faq details p{padding:0 0 16px;font-size:14px;color:var(--nvd-muted)}
+
+/* cta submit */
+.nvd-submit{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center;padding:30px 32px;
+  border-radius:20px;border:1px solid rgba(103,232,249,.28);
+  background:linear-gradient(110deg,rgba(103,232,249,.11),rgba(139,92,246,.12) 70%,transparent)}
+.nvd-submit h2{font-size:clamp(21px,2.6vw,28px);margin-bottom:8px}
+.nvd-submit p{color:#c1d0ea;font-size:14.5px}
+
+/* footer */
+.nvd-footer{border-top:1px solid var(--nvd-line);margin-top:40px;padding:48px 0 30px;background:rgba(7,11,24,.7)}
+.nvd-footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px}
+.nvd-footer h4{font-size:14px;margin-bottom:12px;color:var(--nvd-text)}
+.nvd-footer p,.nvd-footer li{font-size:13px;color:#93a6c5}
+.nvd-footer ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.nvd-footer a:hover{color:var(--nvd-accent)}
+.nvd-footer-bottom{margin-top:30px;padding-top:18px;border-top:1px solid var(--nvd-line);display:flex;flex-wrap:wrap;gap:10px;
+  justify-content:space-between;font-size:12.5px;color:#7f92b1}
+
+/* toast */
+.nvd-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:#14213d;border:1px solid rgba(103,232,249,.45);
+  color:var(--nvd-text);padding:11px 20px;border-radius:12px;font-size:13.5px;opacity:0;pointer-events:none;transition:.28s;z-index:200;
+  box-shadow:0 16px 40px rgba(0,0,0,.5);max-width:88vw;text-align:center}
+.nvd-toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* modal */
+.nvd-modal{position:fixed;inset:0;z-index:180;display:none;align-items:center;justify-content:center;padding:20px;
+  background:rgba(4,8,18,.72);backdrop-filter:blur(6px)}
+.nvd-modal.show{display:flex}
+.nvd-modal-box{background:linear-gradient(165deg,#131f3b,#0e1730);border:1px solid rgba(103,232,249,.32);
+  border-radius:18px;padding:26px;max-width:520px;width:100%;max-height:86vh;overflow:auto;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.nvd-modal-box h3{font-size:19px;margin-bottom:6px}
+.nvd-modal-box .nvd-m-sub{font-size:13.5px;color:var(--nvd-muted);margin-bottom:16px}
+.nvd-field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
+.nvd-field label{font-size:13px;color:#b6c6e4}
+.nvd-field input,.nvd-field textarea{background:#0b1428;border:1px solid var(--nvd-line);border-radius:10px;padding:10px 12px;
+  color:var(--nvd-text);font-size:14px;font-family:inherit;outline:none;resize:vertical}
+.nvd-field input:focus,.nvd-field textarea:focus{border-color:var(--nvd-accent)}
+.nvd-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:6px}
+.nvd-close{position:absolute;top:14px;right:16px;font-size:22px;color:#8fa2c1;line-height:1}
+.nvd-modal-wrap{position:relative}
+
+/* backtop */
+.nvd-backtop{position:fixed;right:20px;bottom:24px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(150deg,var(--nvd-accent),#4fd1e8);color:#06202a;box-shadow:0 12px 30px rgba(103,232,249,.3);
+  opacity:0;pointer-events:none;transition:.25s;z-index:90}
+.nvd-backtop.show{opacity:1;pointer-events:auto}
+.nvd-backtop svg{width:20px;height:20px}
+
+@media (max-width:1024px){
+  .nvd-hero-grid{grid-template-columns:1fr;gap:30px}
+  .nvd-hero-visual{order:-1}
+  .nvd-article{grid-template-columns:1fr}
+  .nvd-aside{position:static;flex-direction:row;flex-wrap:wrap}
+  .nvd-aside-card{flex:1 1 260px}
+  .nvd-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nvd-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .nvd-navlinks{display:none;width:100%;order:4;flex-direction:column;gap:2px;padding-top:8px}
+  .nvd-navlinks.open{display:flex}
+  .nvd-burger{display:grid;margin-left:auto}
+  .nvd-search{order:5;flex:1 1 100%;margin-top:8px;display:none}
+  .nvd-search.open{display:block}
+  .nvd-focus{grid-template-columns:1fr}
+  .nvd-authors{grid-template-columns:1fr}
+  .nvd-reviews{grid-template-columns:1fr}
+  .nvd-partners{grid-template-columns:1fr 1fr}
+  .nvd-vrow{grid-template-columns:1fr}
+  .nvd-vrow-side{justify-self:start;align-items:flex-start;flex-direction:row;flex-wrap:wrap}
+  .nvd-submit{grid-template-columns:1fr}
+  :root{--nvd-sticky:104px}
+}
+@media (max-width:560px){
+  .nvd-topic-grid{grid-template-columns:1fr}
+  .nvd-stats{grid-template-columns:1fr}
+  .nvd-partners{grid-template-columns:1fr}
+  .nvd-dyn-item{grid-template-columns:1fr;gap:4px}
+  .nvd-section{padding:48px 0}
+  .nvd-footer-grid{grid-template-columns:1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="nvd-top">
+  <div class="nvd-announce">
+    <div class="nvd-announce-inner">
+      <span class="nvd-dot"></span>
+      <span><b>11月22日更新</b>｜「完整放映计划」第三季新增 12 部无删减正片，导演评论音轨同步上线</span>
+      <a href="#dynamics">查看更新日志 →</a>
+    </div>
+  </div>
+  <header class="nvd-header">
+    <nav class="nvd-nav" aria-label="主导航">
+      <a class="nvd-logo" href="#top">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#111a31"/><circle cx="32" cy="32" r="17" fill="none" stroke="#67e8f9" stroke-width="4"/><path d="M27 24l14 8-14 8z" fill="#67e8f9"/></svg>
+        <span>无删减视频<small>官方门户</small></span>
+      </a>
+      <button class="nvd-burger" id="nvdBurger" aria-label="展开导航" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="nvd-navlinks" id="nvdNavlinks">
+        <a href="#focus">焦点内容</a>
+        <a href="#videos">视频库</a>
+        <a href="#topics">专题企划</a>
+        <a href="#insight">深度解析</a>
+        <a href="#authors">创作者</a>
+        <a href="#reviews">口碑</a>
+        <a href="#dynamics">动态</a>
+        <a href="#faq">帮助</a>
+      </div>
+      <div class="nvd-search" id="nvdSearchBox">
+        <input type="search" id="nvdSearchInput" placeholder="搜索片名 / 创作者 / 专题" aria-label="站内搜索">
+        <button id="nvdSearchBtn" aria-label="执行搜索">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg>
+        </button>
+        <div class="nvd-search-tip" id="nvdSearchTip"></div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- S2 品牌首屏 -->
+  <section class="nvd-hero">
+    <div class="nvd-wrap">
+      <div class="nvd-hero-grid">
+        <div>
+          <span class="nvd-eyebrow">官方视频门户 · 完整版精品内容</span>
+          <h1>无删减视频<em> · 完整放映</em></h1>
+          <p class="nvd-hero-lead">每一帧都保留，每一段表达都值得被完整看见。</p>
+          <p class="nvd-hero-desc">作为国内深耕“完整视频内容”领域的<b>企业级平台</b>，无删减视频官方网站聚焦长片、纪录、访谈与创作幕后，以高清正版为底线，以创作者社区为土壤，为观众提供可反复观看的精品内容生态。我们坚持不做碎片化裁剪，让内容的力量在完整叙事中自然生长。</p>
+          <div class="nvd-cta">
+            <a class="nvd-btn nvd-btn--primary" href="#videos">进入视频库
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="nvd-btn nvd-btn--ghost" href="#topics">本季专题</a>
+            <button class="nvd-btn nvd-btn--ghost" id="nvdOpenShare">分享平台</button>
+          </div>
+          <div class="nvd-stats">
+            <div class="nvd-stat"><b>12,860</b><span>部完整版正片</span></div>
+            <div class="nvd-stat"><b>48.6 万</b><span>注册创作者与订阅者</span></div>
+            <div class="nvd-stat"><b>96.4%</b><span>内容完播满意度</span></div>
+          </div>
+        </div>
+        <div class="nvd-hero-visual">
+          <svg viewBox="0 0 640 420" role="img" aria-label="无删减视频官方首页主视觉：夜晚放映厅与巨幅屏幕">
+            <defs>
+              <linearGradient id="nvdSky" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#14224a"/><stop offset="1" stop-color="#2a1a4d"/>
+              </linearGradient>
+              <linearGradient id="nvdScreen" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#67e8f9"/><stop offset="0.55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ffd166"/>
+              </linearGradient>
+              <radialGradient id="nvdGlow" cx="0.5" cy="0.4" r="0.6">
+                <stop offset="0" stop-color="#67e8f9" stop-opacity="0.55"/><stop offset="1" stop-color="#67e8f9" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="640" height="420" fill="url(#nvdSky)"/>
+            <circle cx="500" cy="80" r="120" fill="url(#nvdGlow)"/>
+            <circle cx="120" cy="86" r="3" fill="#e9f0ff" opacity="0.8"/>
+            <circle cx="176" cy="60" r="2" fill="#e9f0ff" opacity="0.6"/>
+            <circle cx="240" cy="104" r="2.4" fill="#e9f0ff" opacity="0.7"/>
+            <circle cx="400" cy="54" r="2" fill="#e9f0ff" opacity="0.55"/>
+            <rect x="96" y="118" width="448" height="214" rx="12" fill="#070d1c" stroke="#2b3d68" stroke-width="2"/>
+            <rect x="116" y="138" width="408" height="174" rx="6" fill="url(#nvdScreen)" opacity="0.86"/>
+            <path d="M116 240h408v72a6 6 0 0 1-6 6H122a6 6 0 0 1-6-6z" fill="#0a1226" opacity="0.35"/>
+            <circle cx="320" cy="222" r="36" fill="#070d1c" opacity="0.72"/>
+            <path d="M310 204l28 18-28 18z" fill="#e9f0ff"/>
+            <g fill="#1b2b52">
+              <path d="M60 420c0-52 26-86 74-86s74 34 74 86z"/>
+              <path d="M432 420c0-52 26-86 74-86s74 34 74 86z"/>
+            </g>
+            <g fill="#203156">
+              <path d="M182 420c0-40 22-66 60-66s60 26 60 66z"/>
+              <path d="M338 420c0-40 22-66 60-66s60 26 60 66z"/>
+            </g>
+            <rect x="0" y="376" width="640" height="44" fill="#060b18"/>
+          </svg>
+          <div class="nvd-pulse">● 正片直出</div>
+          <div class="nvd-hero-badge">
+            <span class="nvd-play-dot">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5l11 7-11 7z"/></svg>
+            </span>
+            <span>《长镜头：一条街的十二小时》· 完整版 148 分钟</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点模块 M2 -->
+  <section class="nvd-section" id="focus">
+    <div class="nvd-wrap">
+      <div class="nvd-section-head">
+        <div>
+          <span class="nvd-eyebrow">Focus · 焦点推荐</span>
+          <h2>本周焦点：完整叙事的现场</h2>
+        </div>
+        <p>由编辑部与创作者社区共同推选，聚焦值得被完整看完的长片与系列内容，拒绝“三分钟看完”式压缩。</p>
+      </div>
+
+      <div class="nvd-focus">
+        <article class="nvd-card nvd-focus-main">
+          <div class="nvd-media">
+            <svg viewBox="0 0 800 450" role="img" aria-label="焦点推荐《长镜头：一条街的十二小时》完整版封面">
+              <defs>
+                <linearGradient id="nvdF1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1b2b52"/><stop offset="1" stop-color="#3b2a63"/>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="450" fill="url(#nvdF1)"/>
+              <g stroke="#67e8f9" stroke-opacity="0.35" stroke-width="1">
+                <path d="M0 340h800M0 300h800M0 260h800M0 220h800"/>
+              </g>
+              <g fill="#0d1730">
+                <rect x="60" y="120" width="110" height="240"/>
+                <rect x="186" y="86" width="130" height="274"/>
+                <rect x="332" y="140" width="96" height="220"/>
+                <rect x="444" y="70" width="150" height="290"/>
+                <rect x="610" y="116" width="120" height="244"/>
+              </g>
+              <g fill="#ffd166" opacity="0.85">
+                <rect x="76" y="150" width="18" height="18"/><rect x="110" y="150" width="18" height="18"/>
+                <rect x="76" y="186" width="18" height="18"/><rect x="212" y="118" width="18" height="18"/>
+                <rect x="246" y="118" width="18" height="18"/><rect x="212" y="154" width="18" height="18"/>
+                <rect x="470" y="104" width="18" height="18"/><rect x="504" y="104" width="18" height="18"/>
+                <rect x="538" y="104" width="18" height="18"/><rect x="470" y="140" width="18" height="18"/>
+              </g>
+              <circle cx="400" cy="392" r="5" fill="#67e8f9"/>
+              <path d="M400 392l120-70" stroke="#67e8f9" stroke-width="2"/>
+              <rect x="524" y="304" width="150" height="40" rx="20" fill="#070d1c" opacity="0.8"/>
+              <text x="599" y="330" fill="#67e8f9" font-size="17" text-anchor="middle" font-family="sans-serif">完整版 · 148min</text>
+            </svg>
+          </div>
+          <div class="nvd-body">
+            <span class="nvd-tag">年度企划</span>
+            <span class="nvd-tag nvd-tag--purple">长片</span>
+            <h3>《长镜头：一条街的十二小时》完整版</h3>
+            <p>跟拍一条老商业街从凌晨到午夜的全部十二小时，无剪辑干预、无剧情设定，记录摊主、夜班司机和放学少年的真实一天。全片保留原始环境声，导演在片尾附上 22 分钟创作手记。</p>
+            <div class="nvd-meta">
+              <span>创作者：街头观察所</span><span>播放 128.4 万</span><span>点赞 9.6 万</span><span>收藏 4.2 万</span>
+            </div>
+            <div class="nvd-actions" style="margin-top:16px">
+              <button class="nvd-act" data-like>♡ <span class="nvd-num">9.6万</span></button>
+              <button class="nvd-act" data-fav>☆ 收藏</button>
+              <button class="nvd-act" data-copy data-copy-text="《长镜头：一条街的十二小时》完整版 · 无删减视频">复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="nvd-side-list">
+          <article class="nvd-card nvd-side-item">
+            <div class="nvd-thumb">
+              <svg viewBox="0 0 160 100" role="img" aria-label="焦点推荐《修复师的一天》封面缩略图">
+                <rect width="160" height="100" fill="#16213f"/>
+                <circle cx="52" cy="44" r="24" fill="#67e8f9" opacity="0.75"/>
+                <rect x="84" y="26" width="52" height="10" rx="5" fill="#8b5cf6"/>
+                <rect x="84" y="46" width="40" height="8" rx="4" fill="#ffd166" opacity="0.8"/>
+                <rect x="84" y="62" width="56" height="8" rx="4" fill="#e9f0ff" opacity="0.4"/>
+              </svg>
+            </div>
+            <div>
+              <h4>《修复师的一天》完整纪录</h4>
+              <span>匠人档案 · 播放 42.1 万</span>
+            </div>
+          </article>
+          <article class="nvd-card nvd-side-item">
+            <div class="nvd-thumb">
+              <svg viewBox="0 0 160 100" role="img" aria-label="焦点推荐《访谈：把完整交给观众》封面缩略图">
+                <rect width="160" height="100" fill="#221a3f"/>
+                <rect x="18" y="22" width="56" height="56" rx="8" fill="#4fd1e8" opacity="0.68"/>
+                <path d="M84 34h54M84 48h44M84 62h58" stroke="#e9f0ff" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4>《访谈：把完整交给观众》</h4>
+              <span>人物访谈 · 播放 31.7 万</span>
+            </div>
+          </article>
+          <article class="nvd-card nvd-side-item">
+            <div class="nvd-thumb">
+              <svg viewBox="0 0 160 100" role="img" aria-label="焦点推荐《城市夜行档案·冬》封面缩略图">
+                <rect width="160" height="100" fill="#0f2a30"/>
+                <rect x="20" y="58" width="18" height="32" fill="#67e8f9" opacity="0.7"/>
+                <rect x="46" y="40" width="18" height="50" fill="#8b5cf6" opacity="0.7"/>
+                <rect x="72" y="28" width="18" height="62" fill="#ffd166" opacity="0.7"/>
+                <rect x="98" y="48" width="18" height="42" fill="#67e8f9" opacity="0.5"/>
+                <circle cx="128" cy="26" r="10" fill="#e9f0ff" opacity="0.8"/>
+              </svg>
+            </div>
+            <div>
+              <h4>《城市夜行档案·冬》</h4>
+              <span>城市探索 · 播放 27.5 万</span>
+            </div>
+          </article>
+          <article class="nvd-card nvd-side-item">
+            <div class="nvd-thumb">
+              <svg viewBox="0 0 160 100" role="img" aria-label="焦点推荐《社论：为什么不删》封面缩略图">
+                <rect width="160" height="100" fill="#2c1830"/>
+                <circle cx="80" cy="50" r="30" fill="none" stroke="#ffd166" stroke-width="4"/>
+                <path d="M68 40l24 10-24 10z" fill="#ffd166"/>
+              </svg>
+            </div>
+            <div>
+              <h4>《社论：为什么不删》</h4>
+              <span>行业观察 · 播放 19.8 万</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 视频区 M3 -->
+  <section class="nvd-section" id="videos">
+    <div class="nvd-wrap">
+      <div class="nvd-section-head">
+        <div>
+          <span class="nvd-eyebrow">Library · 视频库</span>
+          <h2>无删减视频 · 本周完整正片</h2>
+        </div>
+        <p>每一部均标注完整时长与版本说明，支持高清播放与收藏，长片优先展示创作手记与版本信息。</p>
+      </div>
+
+      <div class="nvd-vlist">
+        <article class="nvd-card nvd-vrow">
+          <div>
+            <h3>《一间书店的最后三个月》完整纪录</h3>
+            <p>从清仓公告到关门那晚，跟拍书店主理人与十二位老读者，保留全部对话与沉默。片长 96 分钟，含 14 分钟未公开片尾。</p>
+            <div class="nvd-tags"><span class="nvd-tag">纪录长片</span><span class="nvd-tag nvd-tag--purple">城市记忆</span><span class="nvd-tag nvd-tag--warm">完整版</span></div>
+          </div>
+          <div class="nvd-vrow-side">
+            <span class="nvd-num" style="font-size:12.5px;color:#8fa2c1">播放 86.3 万 · 收藏 3.1 万</span>
+            <div class="nvd-actions">
+              <button class="nvd-act" data-like>♡ <span class="nvd-num">6.4万</span></button>
+              <button class="nvd-act" data-fav>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-vrow">
+          <div>
+            <h3>《剪辑台上的取舍：三位剪辑师的对话》</h3>
+            <p>围绕“什么该删、什么必须留”展开 78 分钟圆桌，附真实工程时间线与剪辑决策对照，适合创作者反复观看的教程干货。</p>
+            <div class="nvd-tags"><span class="nvd-tag">教程干货</span><span class="nvd-tag nvd-tag--purple">创作幕后</span></div>
+          </div>
+          <div class="nvd-vrow-side">
+            <span class="nvd-num" style="font-size:12.5px;color:#8fa2c1">播放 54.9 万 · 收藏 2.7 万</span>
+            <div class="nvd-actions">
+              <button class="nvd-act" data-like>♡ <span class="nvd-num">4.1万</span></button>
+              <button class="nvd-act" data-fav>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-vrow">
+          <div>
+            <h3>《一场没有删减的婚礼直播》</h3>
+            <p>新人坚持完整记录仪式全程，从清晨准备到深夜散场共 6 小时 12 分，平台以多机位完整版形式呈现，弹幕区保留真实祝福。</p>
+            <div class="nvd-tags"><span class="nvd-tag">情感故事</span><span class="nvd-tag nvd-tag--warm">完整直播回放</span></div>
+          </div>
+          <div class="nvd-vrow-side">
+            <span class="nvd-num" style="font-size:12.5px;color:#8fa2c1">播放 73.6 万 · 收藏 1.9 万</span>
+            <div class="nvd-actions">
+              <button class="nvd-act" data-like>♡ <span class="nvd-num">5.2万</span></button>
+              <button class="nvd-act" data-fav>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-vrow">
+          <div>
+            <h3>《修复师的一天：从碎片到完整》</h3>
+            <p>记录一位器物修复师从清点、拼接、补配到上色的完整工序，无快进、无跳跃，附材料清单与工具讲解，是手作与匠心题材的口碑之作。</p>
+            <div class="nvd-tags"><span class="nvd-tag">手作DIY</span><span class="nvd-tag nvd-tag--purple">匠人档案</span></div>
+          </div>
+          <div class="nvd-vrow-side">
+            <span class="nvd-num" style="font-size:12.5px;color:#8fa2c1">播放 42.1 万 · 收藏 2.2 万</span>
+            <div class="nvd-actions">
+              <button class="nvd-act" data-like>♡ <span class="nvd-num">3.6万</span></button>
+              <button class="nvd-act" data-fav>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-vrow">
+          <div>
+            <h3>《城市夜行档案·冬》系列第一卷</h3>
+            <p>从晚上十点到凌晨四点，沿三条街区步行拍摄，全程一镜到底，保留风声、脚步声与偶遇的对话，呈现城市冬夜的完整呼吸。</p>
+            <div class="nvd-tags"><span class="nvd-tag">城市探索</span><span class="nvd-tag nvd-tag--purple">一镜到底</span></div>
+          </div>
+          <div class="nvd-vrow-side">
+            <span class="nvd-num" style="font-size:12.5px;color:#8fa2c1">播放 27.5 万 · 收藏 1.4 万</span>
+            <div class="nvd-actions">
+              <button class="nvd-act" data-like>♡ <span class="nvd-num">2.1万</span></button>
+              <button class="nvd-act" data-fav>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-vrow">
+          <div>
+            <h3>《社论：为什么不删——完整内容的长期价值》</h3>
+            <p>平台编辑部出品，以数据与案例说明完整内容对完播率、用户信任与创作者成长的正向影响，回应社区里最常见的争议与讨论。</p>
+            <div class="nvd-tags"><span class="nvd-tag">行业观察</span><span class="nvd-tag nvd-tag--warm">官方发布</span></div>
+          </div>
+          <div class="nvd-vrow-side">
+            <span class="nvd-num" style="font-size:12.5px;color:#8fa2c1">播放 19.8 万 · 收藏 0.9 万</span>
+            <div class="nvd-actions">
+              <button class="nvd-act" data-like>♡ <span class="nvd-num">1.5万</span></button>
+              <button class="nvd-act" data-fav>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题 M4 -->
+  <section class="nvd-section" id="topics">
+    <div class="nvd-wrap">
+      <div class="nvd-section-head">
+        <div>
+          <span class="nvd-eyebrow">Series · 专题企划</span>
+          <h2>正在进行的三组专题企划</h2>
+        </div>
+        <p>专题由平台策划、创作者共建，所有条目均以完整版形式收录，支持连续观看与进度记忆。</p>
+      </div>
+      <div class="nvd-topic-grid">
+        <article class="nvd-card nvd-topic">
+          <span class="nvd-tag">长片计划</span>
+          <h3>完整放映计划 · 第三季</h3>
+          <p>以“不剪一刀”为原则的年度长片企划，每季收录 12 部纪录片与独立影像，配套导演评论音轨与观影笔记。</p>
+          <span class="nvd-status">● 更新中 · 已上线 8/12 部</span>
+          <ul>
+            <li>《长镜头：一条街的十二小时》</li>
+            <li>《一间书店的最后三个月》</li>
+            <li>《修复师的一天》</li>
+          </ul>
+        </article>
+        <article class="nvd-card nvd-topic">
+          <span class="nvd-tag nvd-tag--purple">创作者共建</span>
+          <h3>幕后全记录 · 创作者手记</h3>
+          <p>把拍摄、剪辑、调色、发布的全过程摊开讲，鼓励创作者上传原始素材与决策过程，形成可复用的经验库。</p>
+          <span class="nvd-status">● 征集中 · 已有 63 位创作者参与</span>
+          <ul>
+            <li>《剪辑台上的取舍》圆桌实录</li>
+            <li>《同期声采集的十二个细节》</li>
+            <li>《一部片子的 47 个版本》</li>
+          </ul>
+        </article>
+        <article class="nvd-card nvd-topic">
+          <span class="nvd-tag nvd-tag--warm">社区共创</span>
+          <h3>城市声音地图 · 冬辑</h3>
+          <p>面向社区征集城市片段，要求保留完整环境声与真实节奏，入选作品进入官方专题页并参与年度投票。</p>
+          <span class="nvd-status">● 报名中 · 截止 12 月 18 日</span>
+          <ul>
+            <li>《凌晨四点的早点铺》</li>
+            <li>《末班车上的十三分钟》</li>
+            <li>《雪落之前的三条街》</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M15 深度解析：关键词解析 800+ 字 -->
+  <section class="nvd-section" id="insight">
+    <div class="nvd-wrap">
+      <div class="nvd-section-head">
+        <div>
+          <span class="nvd-eyebrow">Insight · 深度解析</span>
+          <h2>理解“无删减视频”的四层含义</h2>
+        </div>
+        <p>从内容标准、创作生态到用户关系，我们把“无删减”当作一条长期践行的产品原则，而不是一句宣传口号。</p>
+      </div>
+      <div class="nvd-article">
+        <div class="nvd-prose">
+          <h3>一、内容标准：完整是底线，不是卖点</h3>
+          <p>在无删减视频官方网站，一部作品上线前要经过三道与“完整性”相关的校验：第一是版本校验，确认成片与创作者授权版本一致，片长、音轨、字幕均不因渠道差异被替换；第二是叙事校验，编辑会完整观看并记录是否存在因适配时长而强行跳切、抽帧、删段的情况；第三是元数据校验，完整标注片长、版本、语言与创作说明，让观众在点开之前就知道自己将花多少时间、看到什么内容。我们把这套流程称为“完整放映标准”，它适用于每一部纪录长片、访谈、教程与直播回放。</p>
+          <p>之所以把完整当作底线，是因为我们发现：用户对视频平台的信任，往往建立在这种看似笨拙的坚持上。当观众知道点开无删减视频不会看到突然断掉的段落、不会在关键处被切走，他们就更愿意投入时间，也更愿意在评论区留下具体而真诚的反馈。平台的内容生态因此形成了正向循环——<b>完整的内容带来更高的完播率，更高的完播率又反过来鼓励创作者保留完整叙事</b>。这也是我们持续运营多年最重要的经验之一。</p>
+          <h3>二、创作生态：让创作者保留表达的自由</h3>
+          <p>“无删减”不只约束平台，也服务创作者。我们为创作者提供完整的版本管理能力：同一部作品可以保留导演版、公开版、花絮版，但每个版本都会明确标注差异，观众可以自主选择，而不是被动接受唯一剪辑。平台还提供创作手记、素材清单、剪辑对照等辅助工具，让创作者把“取舍的过程”也变成内容的一部分。对于纪录片、访谈与手作教程这类高度依赖细节的品类，这种能力尤其重要。</p>
+          <p>在创作者社区里，我们常年发起“为什么保留这一段”的讨论，鼓励作者解释自己的判断。很多优秀作品正是在这种讨论中被反复打磨：有人因为社区建议补回了被删掉的三分钟沉默，有人重新录制了更完整的操作步骤。平台不做审美的最终裁判，只提供可被检验的完整性与透明的版本信息。这种多元、包容的氛围，让不同风格的创作者都能在同一套规则下被看见。</p>
+          <h3>三、用户关系：把时间尊重放在明面上</h3>
+          <p>完整内容意味着更长的观看时间，因此我们格外重视“时间尊重”。平台在每条内容旁明确展示片长与版本，提供章节索引、倍速、书签与进度记忆；长片默认不自动连播，避免观众在不知情的情况下被推进下一部。评论区与弹幕区也做了分层设计，剧透内容默认折叠，让第一次观看的人保留完整体验。我们相信，用户至上的真正含义，是把选择权与知情权交还给观众。</p>
+          <p>与此同时，平台通过数据榜单、完播报告与创作者月报，把“完整观看”这件事可视化。观众可以看到自己一年里完整看完了多少部长片，创作者可以看到自己的作品在哪些章节被反复回看。这些真实的数据，比任何口号都更能说明完整内容的价值，也让口碑在社区里自然生长。</p>
+          <h3>四、行业观察：完整内容的长期价值</h3>
+          <p>短视频时代的注意力被反复切割，“无删减视频”选择了一条更慢的路。但我们观察到，慢并不等于小：长片的复看率、收藏率与评论深度普遍高于碎片内容，品牌合作方也越来越看重能够承载完整叙事的平台。作为深耕垂直领域的视频品牌，无删减视频官方网站持续投入高清正版、原创企划与创作者扶持，希望在国内内容生态中保留一块可以耐心观看的地方。</p>
+          <p>我们也清醒地看到挑战：版权成本、审核压力、长内容的推荐效率，都是必须长期解决的问题。平台的应对方式是把规则做透明——哪些内容被推荐、为什么被推荐、版本差异在哪里，都尽量让用户与创作者看得懂。企业责任不在于承诺完美，而在于持续运营、持续校正。我们愿意把这条慢路走得更久一些，让完整叙事成为社区共同的品质共识。</p>
+        </div>
+        <aside class="nvd-aside">
+          <div class="nvd-card nvd-aside-card">
+            <h4>完整放映标准</h4>
+            <ul class="nvd-mini-list">
+              <li><i>01</i>版本一致：成片与授权版本逐帧核对</li>
+              <li><i>02</i>叙事完整：拒绝为时长强行删段</li>
+              <li><i>03</i>信息透明：片长、语言、版本全标注</li>
+              <li><i>04</i>尊重观众：长片不自动连播</li>
+            </ul>
+          </div>
+          <div class="nvd-card nvd-aside-card">
+            <h4>平台关键词</h4>
+            <p>官方网站 · 原创 · 正版 · 高清 · 社区 · 创作者 · 内容生态 · 品质 · 口碑 · 深耕 · 持续运营 · 品牌故事</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 作者矩阵 M5 -->
+  <section class="nvd-section" id="authors">
+    <div class="nvd-wrap">
+      <div class="nvd-section-head">
+        <div>
+          <span class="nvd-eyebrow">Creators · 创作者矩阵</span>
+          <h2>在无删减视频持续创作的作者</h2>
+        </div>
+        <p>他们来自纪录、手作、城市影像与访谈等不同方向，共同构成了平台的多元内容生态。</p>
+      </div>
+      <div class="nvd-authors">
+        <article class="nvd-card nvd-author">
+          <div class="nvd-avatar" style="background:linear-gradient(135deg,#67e8f9,#4fd1e8)">街</div>
+          <div>
+            <h3>街头观察所 <span class="nvd-tag">纪录长片</span></h3>
+            <p class="nvd-a-meta">作品 46 部 · 粉丝 28.7 万</p>
+            <p>专注城市公共空间的长期观察，擅长以长镜头与同期声记录日常，代表作《长镜头》系列。坚持不干预拍摄对象，把完整的时间交给观众自己判断。</p>
+            <button class="nvd-link" data-author="街头观察所">查看作者档案 →</button>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-author">
+          <div class="nvd-avatar" style="background:linear-gradient(135deg,#c4b5fd,#8b5cf6);color:#120a24">修</div>
+          <div>
+            <h3>修复师阿岚 <span class="nvd-tag nvd-tag--purple">手作DIY</span></h3>
+            <p class="nvd-a-meta">作品 62 部 · 粉丝 19.4 万</p>
+            <p>器物修复师，视频以完整工序著称，从不快进关键步骤。她认为修复的耐心与视频的完整是一回事，观众看得见每一道裂纹被认真对待。</p>
+            <button class="nvd-link" data-author="修复师阿岚">查看作者档案 →</button>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-author">
+          <div class="nvd-avatar" style="background:linear-gradient(135deg,#ffd166,#f0a93b);color:#2a1c04">夜</div>
+          <div>
+            <h3>夜行档案 <span class="nvd-tag nvd-tag--warm">城市探索</span></h3>
+            <p class="nvd-a-meta">作品 31 部 · 粉丝 15.2 万</p>
+            <p>常在深夜出门拍摄，用一镜到底的方式记录街区呼吸。作品保留风声、脚步与偶遇对话，被社区称为“会呼吸的城市档案”。</p>
+            <button class="nvd-link" data-author="夜行档案">查看作者档案 →</button>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-author">
+          <div class="nvd-avatar" style="background:linear-gradient(135deg,#7dd3fc,#38bdf8);color:#06202a">访</div>
+          <div>
+            <h3>访谈者林间 <span class="nvd-tag">人物访谈</span></h3>
+            <p class="nvd-a-meta">作品 58 部 · 粉丝 23.6 万</p>
+            <p>长期做长访谈，习惯保留受访者的停顿与沉默。她相信完整的对话才有真实的重量，节目单集常在 90 分钟以上，完播率却居高不下。</p>
+            <button class="nvd-link" data-author="访谈者林间">查看作者档案 →</button>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-author">
+          <div class="nvd-avatar" style="background:linear-gradient(135deg,#a7f3d0,#34d399);color:#052e22">剪</div>
+          <div>
+            <h3>剪辑师老周 <span class="nvd-tag nvd-tag--purple">教程干货</span></h3>
+            <p class="nvd-a-meta">作品 74 部 · 粉丝 31.1 万</p>
+            <p>从业十四年的剪辑师，课程以完整工程演示为主，不跳步、不藏私。他的“47 个版本”系列成为平台创作者反复回看的经典教程。</p>
+            <button class="nvd-link" data-author="剪辑师老周">查看作者档案 →</button>
+          </div>
+        </article>
+
+        <article class="nvd-card nvd-author">
+          <div class="nvd-avatar" style="background:linear-gradient(135deg,#fca5a5,#f87171);color:#300c0c">声</div>
+          <div>
+            <h3>声音采集小组 <span class="nvd-tag nvd-tag--warm">治愈影像</span></h3>
+            <p class="nvd-a-meta">作品 39 部 · 粉丝 12.8 万</p>
+            <p>专门采集城市与自然的环境声，作品多为完整时段原声记录。他们相信不剪辑的声音更能让人安静下来，是平台治愈向内容的代表创作者。</p>
+            <button class="nvd-link" data-author="声音采集小组">查看作者档案 →</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 用户评价 M8 -->
+  <section class="nvd-section" id="reviews">
+    <div class="nvd-wrap">
+      <div class="nvd-section-head">
+        <div>
+          <span class="nvd-eyebrow">Voices · 社区口碑</span>
+          <h2>来自观众与创作者的真实评价</h2>
+        </div>
+        <p>评价来自平台社区的真实反馈，语气与关注点各不相同，我们保留原始表达，不做统一修饰。</p>
+      </div>
+      <div class="nvd-reviews">
+        <article class="nvd-card nvd-review">
+          <div class="nvd-r-head"><span class="nvd-avatar" style="background:linear-gradient(135deg,#67e8f9,#4fd1e8);color:#06202a">陈</span><b>陈默</b><span class="nvd-stars">★★★★★</span></div>
+          <p>第一次在一个视频平台把 148 分钟的长片完整看完，中间没有广告插播，也没有被推荐跳走。片尾导演手记特别打动人，能感觉到平台是真的尊重完整这件事。</p>
+          <span class="nvd-r-tag">长片观众 · 完整观看 37 部</span>
+        </article>
+        <article class="nvd-card nvd-review">
+          <div class="nvd-r-head"><span class="nvd-avatar" style="background:linear-gradient(135deg,#c4b5fd,#8b5cf6);color:#120a24">林</span><b>林一舟</b><span class="nvd-stars">★★★★★</span></div>
+          <p>作为创作者，最看重的是版本管理透明。同一部片子我可以留导演版和公开版，观众自己选，不用为了时长被迫删掉重要段落。这一点在别的平台很难做到。</p>
+          <span class="nvd-r-tag">签约创作者 · 纪录片方向</span>
+        </article>
+        <article class="nvd-card nvd-review">
+          <div class="nvd-r-head"><span class="nvd-avatar" style="background:linear-gradient(135deg,#ffd166,#f0a93b);color:#2a1c04">苏</span><b>苏晚晴</b><span class="nvd-stars">★★★★☆</span></div>
+          <p>手作教程完整是真完整，连打磨到第几遍砂纸都拍出来了。缺点是长片太多，周末容易一口气看到凌晨。希望收藏夹能再细分一点，比如按工序归类。</p>
+          <span class="nvd-r-tag">手作爱好者 · 收藏 126 部</span>
+        </article>
+        <article class="nvd-card nvd-review">
+          <div class="nvd-r-head"><span class="nvd-avatar" style="background:linear-gradient(135deg,#7dd3fc,#38bdf8);color:#06202a">周</span><b>周叙白</b><span class="nvd-stars">★★★★★</span></div>
+          <p>夜行档案那个系列我反复看了三遍，风声和脚步声都在，像自己走了一遍。弹幕剧透会自动折叠这个设计很贴心，第一次看的人不会被破坏体验。</p>
+          <span class="nvd-r-tag">城市影像爱好者</span>
+        </article>
+        <article class="nvd-card nvd-review">
+          <div class="nvd-r-head"><span class="nvd-avatar" style="background:linear-gradient(135deg,#a7f3d0,#34d399);color:#052e22">何</span><b>何小满</b><span class="nvd-stars">★★★★☆</span></div>
+          <p>剪辑课程几乎是把工程文件摊开给你看，缺点也明显：节奏偏慢，赶时间的人可能不适应。但对想认真学的人，这种不跳步的讲法反而最省时间。</p>
+          <span class="nvd-r-tag">剪辑学习者 · 课程完播 19 门</span>
+        </article>
+        <article class="nvd-card nvd-review">
+          <div class="nvd-r-head"><span class="nvd-avatar" style="background:linear-gradient(135deg,#fca5a5,#f87171);color:#300c0c">顾</span><b>顾清和</b><span class="nvd-stars">★★★★★</span></div>
+          <p>用过几个视频社区，这里的评论区讨论质量最高，大家会认真聊片子的结构和取舍，很少吵架。能感受到平台在认真维护一种耐心观看的氛围。</p>
+          <span class="nvd-r-tag">社区用户 · 活跃 2 年</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 M10 + 合作 M11 -->
+  <section class="nvd-section" id="dynamics">
+    <div class="nvd-wrap">
+      <div class="nvd-section-head">
+        <div>
+          <span class="nvd-eyebrow">News · 企业动态</span>
+          <h2>官方发布与近期更新</h2>
+        </div>
+        <p>平台功能、内容企划与创作者计划的官方公告，按时间倒序更新。</p>
+      </div>
+      <div class="nvd-dyn">
+        <div class="nvd-dyn-item">
+          <time datetime="2026-11-22">2026.11.22</time>
+          <div>
+            <h3>完整放映计划第三季新增 12 部正片</h3>
+            <p>导演评论音轨与观影笔记同步上线，长片库支持章节跳转与进度记忆，移动端播放页完成高清适配。</p>
+          </div>
+        </div>
+        <div class="nvd-dyn-item">
+          <time datetime="2026-11-15">2026.11.15</time>
+          <div>
+            <h3>创作者版本管理工具开放申请</h3>
+            <p>支持导演版、公开版、花絮版并行管理，版本差异自动生成对照说明，首批开放 200 个名额。</p>
+          </div>
+        </div>
+        <div class="nvd-dyn-item">
+          <time datetime="2026-11-06">2026.11.06</time>
+          <div>
+            <h3>“城市声音地图·冬辑”开启社区报名</h3>
+            <p>面向社区征集完整环境声影像，入选作品进入官方专题，并参与年度投票与线下放映。</p>
+          </div>
+        </div>
+        <div class="nvd-dyn-item">
+          <time datetime="2026-10-28">2026.10.28</time>
+          <div>
+            <h3>评论区剧透折叠功能全量上线</h3>
+            <p>首次观看者默认屏蔽剧透内容，创作者可在发布时标注剧透段落，社区讨论体验进一步优化。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nvd-section-head" style="margin-top:54px">
+        <div>
+          <span class="nvd-eyebrow">Partners · 合作品牌</span>
+          <h2>与我们共建完整内容生态的伙伴</h2>
+        </div>
+        <p>在版权合作、联合企划与创作者扶持等方向长期协作。</p>
+      </div>
+      <div class="nvd-partners">
+        <div class="nvd-partner"><b>拾光影像</b><span>联合出品 · 纪录长片</span></div>
+        <div class="nvd-partner"><b>南岸书房</b><span>场地支持 · 线下放映</span></div>
+        <div class="nvd-partner"><b>声场实验室</b><span>声音技术合作</span></div>
+        <div class="nvd-partner"><b>青禾创投</b><span>创作者扶持基金</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 投稿 + FAQ M13 + M12 -->
+  <section class="nvd-section" id="faq">
+    <div class="nvd-wrap">
+      <div class="nvd-submit">
+        <div>
+          <h2>把你的完整作品带到这里</h2>
+          <p>无论是一部 6 小时的原声记录，还是一段完整的创作手记，只要它值得被完整看见，欢迎投稿。平台提供高清转码、版权登记协助与官方推荐位。</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="nvd-btn nvd-btn--primary" id="nvdOpenSubmit">投稿入口</button>
+          <button class="nvd-btn nvd-btn--ghost" id="nvdOpenFeedback">意见反馈</button>
+        </div>
+      </div>
+
+      <div class="nvd-section-head" style="margin-top:52px">
+        <div>
+          <span class="nvd-eyebrow">FAQ · 帮助中心</span>
+          <h2>关于无删减视频的常见问题</h2>
+        </div>
+        <p>如果你还有其他疑问，可以通过意见反馈联系我们，工作日 24 小时内回复。</p>
+      </div>
+      <div class="nvd-faq">
+        <details open>
+          <summary>“无删减”具体指什么？会包含全部原始素材吗？</summary>
+          <p>指成片与创作者授权版本一致，不会因渠道或时长原因删段、跳切或抽帧。原始素材是否公开由创作者决定，平台提供可选的素材清单与花絮版本。</p>
+        </details>
+        <details>
+          <summary>长片播放是否支持进度记忆和章节跳转？</summary>
+          <p>支持。所有完整版长片均提供章节索引、进度记忆、书签与倍速播放，长片默认不自动连播，避免打断观看节奏。</p>
+        </details>
+        <details>
+          <summary>投稿需要满足哪些条件？</summary>
+          <p>作品需为原创或拥有完整授权，画质不低于 1080P，音轨完整。纪录、访谈、教程、手作、城市影像等以完整叙事为主的方向优先。</p>
+        </details>
+        <details>
+          <summary>创作者如何申请版本管理工具？</summary>
+          <p>在投稿入口提交创作者认证信息，审核通过后可在后台申请。首批开放 200 个名额，后续将按月逐步放开。</p>
+        </details>
+        <details>
+          <summary>平台的内容推荐规则是怎样的？</summary>
+          <p>综合完播率、收藏率、评论深度与版本完整度加权，不单纯以播放量排序。推荐逻辑在官方发布中定期说明，接受社区监督。</p>
+        </details>
+        <details>
+          <summary>评论区的剧透折叠如何生效？</summary>
+          <p>创作者可在发布时标注剧透段落，系统会对相关评论默认折叠。观众也可在设置中手动关闭或开启该功能。</p>
+        </details>
+        <details>
+          <summary>是否支持线下放映与社区活动？</summary>
+          <p>支持。平台与南岸书房等伙伴不定期举办完整版线下放映，报名信息会在企业动态与专题页同步发布。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="nvd-footer">
+  <div class="nvd-wrap">
+    <div class="nvd-footer-grid">
+      <div>
+        <a class="nvd-logo" href="#top" style="margin-bottom:12px">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16223f"/><circle cx="32" cy="32" r="17" fill="none" stroke="#67e8f9" stroke-width="4"/><path d="M27 24l14 8-14 8z" fill="#67e8f9"/></svg>
+          <span>无删减视频<small>官方门户</small></span>
+        </a>
+        <p>无删减视频官方网站，专注完整版视频内容生态，以高清正版、原创企划与创作者社区为核心，持续运营值得信赖的视频品牌。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#videos">完整正片库</a></li>
+          <li><a href="#topics">专题企划</a></li>
+          <li><a href="#insight">深度解析</a></li>
+          <li><a href="#authors">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#dynamics">企业动态</a></li>
+          <li><a href="#reviews">社区口碑</a></li>
+          <li><a href="#faq">帮助中心</a></li>
+          <li><a href="#faq">投稿与反馈</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>合作邮箱：partner@wujianshan.example</li>
+          <li>投稿咨询：submit@wujianshan.example</li>
+          <li>工作日 10:00 - 19:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="nvd-footer-bottom">
+      <span>© 2026 无删减视频 版权所有 · 官方网站 · 持续运营中</span>
+      <span>备案号：京ICP备2026011888号-3 · 网络文化经营许可证</span>
+    </div>
+  </div>
+</footer>
+
+<div class="nvd-toast" id="nvdToast" role="status" aria-live="polite"></div>
+
+<button class="nvd-backtop" id="nvdBacktop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="nvd-modal" id="nvdModal">
+  <div class="nvd-modal-box nvd-modal-wrap">
+    <button class="nvd-close" id="nvdModalClose" aria-label="关闭">×</button>
+    <div id="nvdModalContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var toast = document.getElementById('nvdToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2400);
+  }
+
+  /* mobile nav */
+  var burger = document.getElementById('nvdBurger');
+  var navlinks = document.getElementById('nvdNavlinks');
+  var searchBox = document.getElementById('nvdSearchBox');
+  burger.addEventListener('click', function(){
+    var open = navlinks.classList.toggle('open');
+    searchBox.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navlinks.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 860){
+      navlinks.classList.remove('open');
+      searchBox.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* search feedback */
+  var searchInput = document.getElementById('nvdSearchInput');
+  var searchBtn = document.getElementById('nvdSearchBtn');
+  var searchTip = document.getElementById('nvdSearchTip');
+  var searchData = [
+    '长镜头：一条街的十二小时',
+    '一间书店的最后三个月',
+    '修复师的一天',
+    '城市夜行档案·冬',
+    '剪辑台上的取舍',
+    '访谈：把完整交给观众',
+    '完整放映计划第三季',
+    '创作者手记专题',
+    '街头观察所',
+    '剪辑师老周'
+  ];
+  function runSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchTip.textContent = '试试搜索“修复师”“长镜头”或“完整放映计划”。';
+      searchTip.classList.add('show');
+      return;
+    }
+    var hits = searchData.filter(function(item){ return item.indexOf(q) !== -1; });
+    if(hits.length){
+      searchTip.textContent = '找到 ' + hits.length + ' 条相关完整内容：' + hits.slice(0,3).join('、') + (hits.length>3?' 等':'') + '。';
+    }else{
+      searchTip.textContent = '暂未找到“' + q + '”相关正片，可尝试投稿或浏览专题企划。';
+    }
+    searchTip.classList.add('show');
+  }
+  searchBtn.addEventListener('click', runSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); runSearch(); } });
+  document.addEventListener('click', function(e){
+    if(!searchBox.contains(e.target)) searchTip.classList.remove('show');
+  });
+
+  /* like / fav */
+  document.querySelectorAll('[data-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('on-like');
+      var numEl = btn.querySelector('.nvd-num');
+      if(numEl){
+        var raw = numEl.textContent.replace('万','');
+        var val = parseFloat(raw);
+        if(!isNaN(val)){
+          val = on ? val + 0.1 : val - 0.1;
+          numEl.textContent = (Math.round(val*10)/10).toFixed(1) + '万';
+        }
+      }
+      showToast(on ? '已点赞，感谢支持完整内容' : '已取消点赞');
+    });
+  });
+  document.querySelectorAll('[data-fav]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('on-fav');
+      btn.textContent = on ? '★ 已收藏' : '☆ 收藏';
+      showToast(on ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* copy link */
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = btn.getAttribute('data-copy-text') || '无删减视频 · 完整放映';
+      var full = text + ' | 无删减视频官方网站';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(full).then(function(){ showToast('链接已复制到剪贴板'); })
+        .catch(function(){ showToast('复制失败，请手动选择文本'); });
+      }else{
+        showToast('链接已生成：' + full);
+      }
+    });
+  });
+
+  /* modal */
+  var modal = document.getElementById('nvdModal');
+  var modalContent = document.getElementById('nvdModalContent');
+  var modalClose = document.getElementById('nvdModalClose');
+  function openModal(html){
+    modalContent.innerHTML = html;
+    modal.classList.add('show');
+  }
+  function closeModal(){ modal.classList.remove('show'); }
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  /* share */
+  document.getElementById('nvdOpenShare').addEventListener('click', function(){
+    openModal(
+      '<h3>分享无删减视频</h3>' +
+      '<p class="nvd-m-sub">把完整放映计划分享给朋友，一起耐心看完一部好片。</p>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+      '<button class="nvd-btn nvd-btn--ghost" data-share="微信">微信</button>' +
+      '<button class="nvd-btn nvd-btn--ghost" data-share="微博">微博</button>' +
+      '<button class="nvd-btn nvd-btn--ghost" data-share="QQ">QQ</button>' +
+      '<button class="nvd-btn nvd-btn--primary" id="nvdCopyShare">复制链接</button>' +
+      '</div>'
+    );
+    document.querySelectorAll('[data-share]').forEach(function(b){
+      b.addEventListener('click', function(){ showToast('已生成' + b.getAttribute('data-share') + '分享卡片（演示）'); });
+    });
+    var cp = document.getElementById('nvdCopyShare');
+    if(cp){
+      cp.addEventListener('click', function(){
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText('无删减视频 · 完整放映 | 官方网站').then(function(){ showToast('链接已复制到剪贴板'); });
+        }else{
+          showToast('链接已生成，请手动复制');
+        }
+      });
+    }
+  });
+
+  /* author modal */
+  document.querySelectorAll('[data-author]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author');
+      openModal(
+        '<h3>' + name + '</h3>' +
+        '<p class="nvd-m-sub">无删减视频社区创作者 · 官方认证</p>' +
+        '<p style="font-size:14px;color:#c1d0ea;margin-bottom:14px">该创作者持续在平台发布完整版作品，所有内容均标注版本与片长，代表作进入官方专题与完整放映计划。可在视频库中查看其全部正片与创作手记。</p>' +
+        '<button class="nvd-btn nvd-btn--primary" data-jump="videos">前往视频库</button>'
+      );
+      var jump = modalContent.querySelector('[data-jump]');
+      if(jump){
+        jump.addEventListener('click', function(){
+          closeModal();
+          document.getElementById('videos').scrollIntoView({behavior:'smooth'});
+        });
+      }
+    });
+  });
+
+  /* submit */
+  document.getElementById('nvdOpenSubmit').addEventListener('click', function(){
+    openModal(
+      '<h3>投稿入口</h3>' +
+      '<p class="nvd-m-sub">请填写作品基本信息，我们会在 5 个工作日内回复。</p>' +
+      '<div class="nvd-field"><label for="nvdF1">作品名称</label><input id="nvdF1" type="text" placeholder="例如：修复师的一天"></div>' +
+      '<div class="nvd-field"><label for="nvdF2">作者昵称</label><input id="nvdF2" type="text" placeholder="你的创作者昵称"></div>' +
+      '<div class="nvd-field"><label for="nvdF3">作品简介</label><textarea id="nvdF3" rows="3" placeholder="片长、版本、内容方向，以及为什么它值得被完整看见"></textarea></div>' +
+      '<div class="nvd-modal-actions"><button class="nvd-btn nvd-btn--ghost" data-close>取消</button><button class="nvd-btn nvd-btn--primary" id="nvdSubmitSend">提交投稿</button></div>'
+    );
+    modalContent.querySelector('[data-close]').addEventListener('click', closeModal);
+    document.getElementById('nvdSubmitSend').addEventListener('click', function(){
+      var n = document.getElementById('nvdF1').value.trim();
+      var a = document.getElementById('nvdF2').value.trim();
+      if(!n || !a){ showToast('请填写作品名称与作者昵称'); return; }
+      closeModal();
+      showToast('投稿已提交，我们会在 5 个工作日内回复');
+    });
+  });
+
+  /* feedback */
+  document.getElementById('nvdOpenFeedback').addEventListener('click', function(){
+    openModal(
+      '<h3>意见反馈</h3>' +
+      '<p class="nvd-m-sub">告诉我们你对完整内容体验的建议，工作日 24 小时内回复。</p>' +
+      '<div class="nvd-field"><label for="nvdFb1">反馈类型</label><input id="nvdFb1" type="text" placeholder="播放体验 / 内容推荐 / 版权问题"></div>' +
+      '<div class="nvd-field"><label for="nvdFb2">详细说明</label><textarea id="nvdFb2" rows="3" placeholder="请描述你遇到的问题或建议"></textarea></div>' +
+      '<div class="nvd-modal-actions"><button class="nvd-btn nvd-btn--ghost" data-close>取消</button><button class="nvd-btn nvd-btn--primary" id="nvdFbSend">提交反馈</button></div>'
+    );
+    modalContent.querySelector('[data-close]').addEventListener('click', closeModal);
+    document.getElementById('nvdFbSend').addEventListener('click', function(){
+      closeModal();
+      showToast('反馈已收到，感谢你帮助平台持续改进');
+    });
+  });
+
+  /* backtop */
+  var backtop = document.getElementById('nvdBacktop');
+  window.addEventListener('scroll', function(){
+    backtop.classList.toggle('show', window.scrollY > 600);
+  }, {passive:true});
+  backtop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
